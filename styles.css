@@ -8,7 +8,7 @@
   display: grid;
   font-family: "Roboto";
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 6fr;
   grid-template-areas:
     "sidebar header"
     "sidebar main";
@@ -21,7 +21,7 @@
   grid-area: header;
   background-color: white;
   grid-template-rows: repeat(2, 1fr);
-  box-shadow: 0px 3px 25px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 25px -5px rgba(0, 0, 0, 0.35);
   z-index: 2;
 }
 
@@ -48,7 +48,7 @@ ul {
   display: grid;
   grid-template-columns: minmax(600px, 2.5fr) minmax(200px, 1.5fr);
   background-color: rgb(234, 233, 233);
-  padding: 25px 10px;
+  padding: 25px 20px;
 }
 
 .mainContent .leftColumn {
@@ -56,14 +56,48 @@ ul {
 
 .mainContent .leftColumn .projectsContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(365px, 1fr));
   grid-template-rows: repeat(3, 1fr);
-  height: 100%;
+  height: 90%;
   gap: clamp(10px, 4%, 40px);
+  margin-top: 10px;
 }
 
 .mainContent .leftColumn .projectsContainer > article {
+  display: grid;
+  grid-template-rows: 0.5fr 2fr 0.5fr;
   background-color: white;
+  padding: 32px 25px 10px 32px;
+  font-size: 15px;
+  color: rgb(92, 93, 93);
+  border-left: 7px solid orange;
+  border-radius: 5px;
+  box-shadow: 10px 8px 5px -7px rgba(0, 0, 0, 0.35);
+}
+
+.mainContent .leftColumn .projectsContainer > article p {
+  text-wrap: wrap;
+}
+
+.mainContent .leftColumn .projectsContainer > article .actionIcons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: end;
+  align-content: center;
+  width: 45%;
+  justify-self: end;
+}
+
+.mainContent .leftColumn .projectsContainer > article .actionButton {
+  width: 1.5rem;
+  height: auto;
+}
+
+.mainContent .leftColumn .projectsContainer h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  height: max-content;
 }
 
 .mainContent .rightColumn {
@@ -71,6 +105,7 @@ ul {
 
 .mainContent .leftColumn h2 {
   font-weight: 500;
+  font-size: 18px;
 }
 
 .sidebar #dashboardIcon {
@@ -97,7 +132,7 @@ ul {
 .header .topHeader {
   display: grid;
   grid-template-columns: 1fr 8fr 1fr 1fr 2fr;
-  padding: clamp(8px, 2%, 2rem);
+  padding: clamp(8px, 1%, 1.5rem);
   align-items: center;
 }
 
@@ -134,7 +169,7 @@ ul {
 }
 
 .bottomHeader #accountImageLower {
-  width: 5rem;
+  width: 4rem;
   height: auto;
 }
 
